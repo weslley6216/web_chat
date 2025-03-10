@@ -1,0 +1,6 @@
+[submodule "chat_api"]
+	path = chat_api
+	url = ./chat_api
+[submodule "chat_frontend"]
+	path = chat_frontend
+	url = ./chat_frontend
