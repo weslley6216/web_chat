@@ -3,7 +3,6 @@ services:
   db:
     image: postgres:alpine
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
@@ -29,6 +28,5 @@ services:
     volumes:
       - ./chat_frontend:/app
       - /app/node_modules
-    command: npm run dev
     depends_on:
       - chat_api
