@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   db:
     image: postgres:alpine
@@ -7,6 +6,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - '5432:5432'
+
   chat_api:
     build:
       context: ./chat_api
@@ -19,6 +19,7 @@ services:
       - ./chat_api:/opt/app
     depends_on:
       - db
+
   chat_frontend:
     build:
       context: ./chat_frontend
@@ -26,7 +27,6 @@ services:
     ports:
       - "4000:4000"
     volumes:
-      - ./chat_frontend:/app
-      - /app/node_modules
+      - ./chat_frontend:/opt/app
     depends_on:
       - chat_api
