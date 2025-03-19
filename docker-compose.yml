@@ -17,6 +17,7 @@ services:
       - '3000:3000'
     volumes:
       - ./chat_api:/opt/app
+      - rubygems:/usr/local/bundle
     depends_on:
       - db
 
@@ -30,3 +31,6 @@ services:
       - ./chat_frontend:/opt/app
     depends_on:
       - chat_api
+
+volumes:
+  rubygems:
