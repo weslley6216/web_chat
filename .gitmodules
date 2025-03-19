@@ -1,6 +1,7 @@
 [submodule "chat_api"]
-	path = chat_api
-	url = ./chat_api
+    path = chat_api
+    url = https://github.com/weslley6216/chat_api.git
+
 [submodule "chat_frontend"]
-	path = chat_frontend
-	url = ./chat_frontend
+    path = chat_frontend
+    url = https://github.com/weslley6216/chat_frontend.git
